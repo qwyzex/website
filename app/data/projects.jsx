@@ -1,6 +1,18 @@
 // prettier-ignore
 export const projects = [
     {
+        name: "AXC",
+        codename: "attemp-x",
+        desc: "Better Than AzCHA",
+        lang: ["NextJS", "React", "Firebase"],
+        about: ["AzCHA stands for 'Attemp-Zero CHat App'. Zero comes from index[0], a JavaScript Array Reference. As this is my first Web App (even though not really maintained), I'm so happy finally have one.", "This app is public chat, no private head-to-head chat feature (not yet, or never will). Initially started on 13th October 2021, but actually working on the end of the year"],
+        demo: "https://axch.vercel.app",
+        repo: "https://github.com/qwyzex/axc",
+        date: "2022-1-10",
+        type: "big",
+        index: 3
+    },
+    {
         name: "AzCHA",
         codename: "attemp-zero",
         desc: "Chat App",
