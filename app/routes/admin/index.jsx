@@ -8,6 +8,13 @@ export default function AdminIndex() {
                 <Link to="./newpost">CREATE NEW POST</Link>
             </li>
             <li>
+                <Link to="./newproject">UPDATE NEW PROJECT</Link>
+            </li>
+            <li>
+                <Link to="./newschool">UPDATE NEW SCHOOL</Link>
+            </li>
+            <hr />
+            <li>
                 <a href="https://github.com/qwyzex/website" target="_blank">
                     REPOSITORY
                 </a>

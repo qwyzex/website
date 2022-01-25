@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { redirect, Form, useActionData, useTransition, Link, useLoaderData } from "remix";
 import { createPost, getPosts } from "~/post";
 import newStyle from "~/styles/css/admin/new.css";
+import { NavigateBackToAdmin } from "../admin";
 
 export const loader = () => {
     return getPosts();
@@ -67,9 +68,7 @@ export default function NewPost() {
 
     return (
         <div className="new-post-form-container">
-            <Link to="/admin" className="cascade">
-                {"<"} ADMIN
-            </Link>
+            <NavigateBackToAdmin />
             <hr />
             <h1>CREATE NEW POST</h1>
             <Form method="post" autoComplete="off" id="new-post-form">
