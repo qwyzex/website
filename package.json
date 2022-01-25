@@ -13,7 +13,8 @@
     "build": "remix build",
     "dev": "cross-env NODE_ENV=development netlify dev",
     "postinstall": "remix setup node",
-    "start": "concurrently --kill-others \"npm run dev\" \"sass --watch app/styles/sass:app/styles/css\""
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run sass\"",
+    "sass": "sass --watch app/styles/sass:app/styles/css"
   },
   "dependencies": {
     "@formspree/react": "^2.2.4",
