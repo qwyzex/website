@@ -15,7 +15,7 @@ export let meta = () => {
 const License = () => {
     return (
         <section>
-            <RouteNav index={true} text={["profile", "about"]} />
+            <RouteNav lvl={3} index={true} text={["profile", "about"]} />
             <h1 style={{ fontSize: "2em", paddingInline: "1em" }}>ASSETS LICENSE</h1>
             <div className="license-text">
                 <div className="optional-license-text">

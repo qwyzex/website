@@ -16,7 +16,7 @@ export const RouteNavTwo = (props) => {
             <Link to="/">Home</Link>
             &#9656;
             <a
-                to={
+                href={
                     props.index === true
                         ? ".."
                         : props.index === "custom"

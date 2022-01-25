@@ -54,7 +54,6 @@ const Landing = () => {
 };
 
 const LandingProjects = () => {
-    projects.reverse();
     projects.length = 2;
 
     return (
