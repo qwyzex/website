@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "remix-app-template-js",
+  "name": "qwyzex",
   "description": "Ihsan Fashbir's Personal Portofolio Website",
   "license": "CC-BY-NC-SA-4.0",
   "version": "2.0.1",
@@ -13,7 +13,7 @@
     "build": "remix build",
     "dev": "cross-env NODE_ENV=development netlify dev",
     "postinstall": "remix setup node",
-    "start": "concurrently \"nr dev\" \"sass --watch app/styles/sass:app/styles/css\""
+    "start": "concurrently --kill-others \"npm run dev\" \"sass --watch app/styles/sass:app/styles/css\""
   },
   "dependencies": {
     "@formspree/react": "^2.2.4",

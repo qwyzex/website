@@ -32,6 +32,24 @@ const Profile = () => {
                 <div className="box"></div>
             </div>
             <h1>About Me</h1>
+            <Texts />
+            <div className="custom-MoreOthers-wrapper">
+                <MoreOthers
+                    data={[
+                        { name: "about", url: "about" },
+                        { name: "skills", url: "skills" },
+                        { name: "education", url: "education" },
+                        { name: "actual stuff", url: "stuff" },
+                    ]}
+                />
+            </div>
+        </div>
+    );
+};
+
+const Texts = () => {
+    return (
+        <>
             <p>
                 My name is <x-acc>Ihsan Fashbir Danurrahardjo</x-acc>, my mate usually
                 call me Ihsan. I am a web-developer from <x-acc>Indonesia</x-acc>.
@@ -50,18 +68,8 @@ const Profile = () => {
                 School if I may say. I had a lotta friends there, competing in multiple
                 Math's Olympic, had a good leadership skill.
             </p>
-            <div className="custom-MoreOthers-wrapper">
-                <MoreOthers
-                    data={[
-                        { name: "about", url: "about" },
-                        { name: "skills", url: "skills" },
-                        { name: "education", url: "education" },
-                        { name: "actual stuff", url: "stuff" },
-                    ]}
-                />
-            </div>
-        </div>
-    );
-};
+        </>
+    )
+}
 
 export default Profile;

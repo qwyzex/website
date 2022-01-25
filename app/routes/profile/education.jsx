@@ -20,18 +20,9 @@ export let meta = () => {
 
 export let loader = () => {
     let data = {
-        current: [
-            {
-                name: "SMP 2 Metro Timur",
-                url: "https://smpn2metro.sch.id/",
-                desc: '"UPTD SMP Negeri 2 Metro pada awalnya merupakan sekolah filial dari SMP Negeri 1 Metro yang menjadi sekolah negeri difinitif dengan Surat Keputusan Menteri Pendidikan dan Kebudayaan. Sekolah ini merupakan salah satu sekolah unggulan masyarakat Kota Metro. Secara geografis UPTD SMP Negeri 2 Metro terletak di perbatasan dengan Kabupaten Lampung Timur. Kondisi seperti ini memberikan peluang bagi  siswa lulusan SD untuk berkompetisi masuk menjadi siswa UPTD SMP Negeri 2 Metro."',
-                img: "/images/modules/smp2-2.jpg",
-            },
-        ],
         school: [
             {
-                name: "SMP 2 Metro Timur",
-                url: "https://smpn2metro.sch.id/",
+                name: "TK PKK 1 Yosodadi",
                 desc: "blablabla",
             },
             {
@@ -40,7 +31,8 @@ export let loader = () => {
                 desc: "blablabla",
             },
             {
-                name: "TK PKK 1 Yosodadi",
+                name: "SMP 2 Metro Timur",
+                url: "https://smpn2metro.sch.id/",
                 desc: "blablabla",
             },
         ],
@@ -95,23 +87,23 @@ const SchoolCurrent = () => {
         <div className="current-container">
             <h4 className="current-title cascade">// CURRENTLY on</h4>
             <div className="current-content">
-                {data.current.map((currents) => (
+                {data.school.map((cs) => (
                     <>
-                        <article className="current-text" key={currents}>
-                            <div key={currents.name}>
+                        <article className="current-text" key={cs}>
+                            <div key={cs.name}>
                                 <h1 className="current-school">
-                                    {currents.name.toLowerCase().replace(/ /g, "_")}()
+                                    {cs.name.toLowerCase().replace(/ /g, "_")}()
                                 </h1>
                                 {cbo}
                             </div>
-                            <div key={currents.desc}>
-                                <p className="current-par">{currents.desc}</p>
+                            <div key={cs.desc}>
+                                <p className="current-par">{cs.desc}</p>
                                 {cbc}
                             </div>
                         </article>
                         <img
-                            key={currents.img}
-                            src={currents.img}
+                            key={cs.img}
+                            src={cs.img}
                             alt="current-school-pic"
                         />
                     </>

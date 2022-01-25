@@ -87,10 +87,6 @@ const SkillsGeneral = () => {
                         <p key={skill.desc}>{skill.desc}</p>
                     </li>
                 ))}
-                {/* <li className="non-tech-skills-item">
-                    <h4>Draw (sketch)</h4>
-                    <p>I hate coloring. That's it. I don't receive opinion.</p>
-                </li> */}
             </ul>
         </div>
     );

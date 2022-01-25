@@ -1,6 +1,10 @@
 body {
     // background: var(--dim), url("/images/background/abstract-18.jpg");
-    background: #fff;
+    background: linear-gradient(120deg, #ff7519, #ff8d9c);
+}
+
+#header {
+    background: linear-gradient(var(--color-background-medium-transparent-bold), #00000000);
 }
 
 .nav-items a.contact {
@@ -59,6 +63,27 @@ body {
 .contact-parrent {
     padding: 3rem 0;
     max-width: 95vw;
+    position: relative;
+    z-index: 7;
+
+    > h1 {
+        text-shadow: 2px 2px 2px #20202030;
+    }
+
+    > .dummy {
+        z-index: -1;
+        position: absolute;
+        top: 2rem;
+        right: 8rem;
+        
+        width: 7rem;
+        height: 7rem;
+        background: linear-gradient(04deg, gold, orange);
+        border-radius: .6em;
+
+        animation: spinn 3s linear infinite;
+        box-shadow: 0 0 15px #ffd700d4;
+    }
 
     .contact-container {
         padding: 2rem;
@@ -227,5 +252,11 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes spinn {
+    to {
+        transform: rotate(360deg);
     }
 }

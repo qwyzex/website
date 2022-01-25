@@ -1,3 +1,5 @@
+import { Link } from "remix";
+
 export default function RouteNav(props) {
     if (props.lvl === 3) {
         return <RouteNavThree index={props.index} text={props.text} />;
@@ -11,10 +13,10 @@ export default function RouteNav(props) {
 export const RouteNavTwo = (props) => {
     return (
         <div className="route-nav">
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
             &#9656;
             <a
-                href={
+                to={
                     props.index === true
                         ? ".."
                         : props.index === "custom"
@@ -31,7 +33,7 @@ export const RouteNavTwo = (props) => {
 export const RouteNavThree = (props) => {
     return (
         <div className="route-nav">
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
             &#9656;
             <a href={props.index === true ? ".." : "."}>{props.text[0]}</a>
             &#9656;

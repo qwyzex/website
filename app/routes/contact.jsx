@@ -18,6 +18,7 @@ const Contact = () => {
     return (
         <div className="contact-parrent">
             <h1>CONTACT ME!</h1>
+            <div className="dummy"></div>
             <ContactForm />
         </div>
     );
@@ -27,10 +28,9 @@ const Contact = () => {
 const ContactForm = () => {
     const [state, handleSubmit] = useForm(formspreeKey);
 
-    // show status function
-    function showStatus() {
-        document.querySelector("#msgStatus").classList.add("show");
-    }
+    const   submitting = state.submitting, 
+            success = state.succeeded,
+            err = state.errors;
 
     // status
     const FormStatus = () => {
@@ -38,25 +38,24 @@ const ContactForm = () => {
             document.querySelector("#contact-form").reset();
         }
 
-        const cls = state.succeeded
-            ? "show success"
-            : state.submitting
-            ? "show pending"
-            : "error";
-
-        const Content = () => {
-            if (state.succeeded) {
-                return <p>SUCCESS!</p>;
-            } else if (state.submitting) {
-                return <p>SUBMITTING...</p>;
-            } else {
-                return <p>ERROR</p>;
-            }
-        };
-
         return (
-            <div id="msgStatus" className={cls}>
-                <Content />
+            <div
+                id="msgStatus"
+                className={
+                    success
+                        ? "show success"
+                        : submitting
+                        ? "show pending"
+                        : "error"
+                }
+            >
+                <p>
+                    {success
+                        ? "SUCCESS"
+                        : submitting
+                        ? "SUBMITTING..."
+                        : "ERROR"}
+                </p>
             </div>
         );
     };
@@ -67,19 +66,19 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} id="contact-form" autoComplete="off">
                 {/* name */}
                 <div className="name">
-                    <label htmlFor="name">Full Name</label>
+                    <label htmlFor="name">Name</label>
                     <input
                         id="name"
                         type="name"
                         name="name"
-                        placeholder="gemme ur name"
+                        placeholder="Your Name"
                         required
                     />
                 </div>
 
                 {/* email */}
                 <div className="email">
-                    <label htmlFor="email">Email Address</label>
+                    <label htmlFor="email">Email</label>
                     <input
                         id="email"
                         type="email"
@@ -93,7 +92,7 @@ const ContactForm = () => {
 
                 {/* subject */}
                 <div className="subject">
-                    <label htmlFor="subject">The Subject</label>
+                    <label htmlFor="subject">Subject</label>
                     <input
                         id="subject"
                         type="subject"
@@ -104,11 +103,11 @@ const ContactForm = () => {
 
                 {/* message */}
                 <div className="message">
-                    <label htmlFor="message">Your Message</label>
+                    <label htmlFor="message">Message</label>
                     <textarea
                         id="message"
                         name="message"
-                        placeholder="Put your message here..."
+                        placeholder="Type your message here..."
                         required
                     />
                 </div>
@@ -118,7 +117,7 @@ const ContactForm = () => {
                     <button
                         type="submit"
                         disabled={state.submitting}
-                        onClick={showStatus}
+                        onClick={() => document.querySelector("#msgStatus").classList.add("show")}
                     >
                         SEND MESSAGE
                     </button>
