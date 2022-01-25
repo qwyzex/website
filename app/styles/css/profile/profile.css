@@ -1,0 +1,117 @@
+body {
+  background: linear-gradient(75deg, var(--color-background-medium), #3a188a);
+}
+
+.nav-items a.profile::before {
+  width: 100% !important;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* backdrop-filter: blur(6px); */
+  width: 100%;
+  font-family: var(--font-body);
+  text-align: center;
+  padding: 3rem min(7vw, 8rem);
+}
+.profile-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.profile-container p {
+  font-size: 1.4em;
+}
+.profile-container .pfp-container {
+  position: relative;
+}
+.profile-container .pfp-container img {
+  height: 200px;
+  aspect-ratio: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.profile-container .pfp-container > div {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  z-index: 0;
+  transition: 0.5s ease;
+  opacity: 0.4;
+}
+.profile-container .pfp-container > div:hover {
+  opacity: 1;
+}
+.profile-container .pfp-container > div:nth-of-type(1) {
+  top: -20px;
+  right: -20px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  animation: slideLeft 2s forwards;
+}
+.profile-container .pfp-container > div:nth-of-type(2) {
+  bottom: 10px;
+  left: -30px;
+  background-color: greenyellow;
+  animation: spin 6s infinite linear;
+}
+.profile-container .custom-MoreOthers-wrapper {
+  background: var(--dim), url("/images/background/abstract-9.jpg") no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(3rem);
+  min-width: 100%;
+  max-width: 98vw;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+  border-radius: 0.6em;
+  box-shadow: 0 12px 24px #20202080;
+}
+.profile-container .randomDiv {
+  position: absolute;
+  top: 8%;
+  right: 100%;
+  width: 400px;
+  height: 650px;
+  border-radius: 1.2rem;
+  box-shadow: -15px -15px 30px #20202050 inset;
+  z-index: 0;
+  background: linear-gradient(45deg, var(--color-background-transparent-bold), var(--color-background-medium-transparent-semi));
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(7rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-7rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=profile.css.map */

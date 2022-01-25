@@ -1,0 +1,181 @@
+body {
+  background: #fff;
+}
+
+.nav-items a.contact::before {
+  width: 100% !important;
+}
+
+@media (max-width: 65rem) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container #contact-form div {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-container #contact-form div.submit {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .contact-container .contact-info {
+    width: 100%;
+  }
+}
+@media (min-width: 65rem) {
+  .contact-container {
+    flex-direction: row;
+  }
+  .contact-container #contact-form {
+    width: 100%;
+  }
+  .contact-container #contact-form div {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+  }
+  .contact-container #contact-form div.submit {
+    display: flex;
+    gap: 1rem;
+    padding-inline-start: 8rem;
+  }
+  .contact-container .contact-info {
+    width: min-content;
+  }
+}
+.contact-parrent {
+  padding: 3rem 0;
+  max-width: 95vw;
+}
+.contact-parrent .contact-container {
+  padding: 2rem;
+  background-color: var(--color-background-transparent-semi);
+  backdrop-filter: var(--blur-medium);
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+}
+.contact-parrent .contact-container .contact-info {
+  background-color: #ff003cda;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: 0.4s ease;
+  animation: slideUp 3s forwards ease-out;
+}
+.contact-parrent .contact-container .contact-info:hover {
+  background-color: #ff003cff;
+}
+.contact-parrent .contact-container .contact-info ul.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-parrent .contact-container .contact-info ul.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.contact-parrent .contact-container .contact-info ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-parrent .contact-container .contact-info ul li img {
+  height: 20px;
+}
+.contact-parrent .contact-container #contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-parrent .contact-container #contact-form div input,
+.contact-parrent .contact-container #contact-form div textarea {
+  outline: none;
+  border: none;
+  padding: 0.4rem;
+  transition: 0.3s ease;
+  font-family: var(--font-body);
+}
+.contact-parrent .contact-container #contact-form div input:focus-within,
+.contact-parrent .contact-container #contact-form div textarea:focus-within {
+  outline: 2px solid #ccc;
+  border-radius: 0.1rem;
+}
+.contact-parrent .contact-container #contact-form div textarea {
+  min-height: 5rem;
+  max-height: 12rem;
+  resize: vertical;
+}
+.contact-parrent .contact-container #contact-form div.submit button {
+  border: none;
+  background: #dfdfdf;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  color: var(--color-background);
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: 0.4s ease;
+  outline: 2px solid #00000000;
+}
+.contact-parrent .contact-container #contact-form div.submit button:focus {
+  outline: 2px solid #bbb;
+}
+.contact-parrent .contact-container #contact-form div.submit button:active {
+  outline: 2px solid #bcbcdc;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus {
+  visibility: hidden;
+  flex-direction: row;
+  width: max-content;
+  padding: 4px 10px;
+  border-radius: 0;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.show {
+  visibility: visible !important;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.error {
+  background-color: var(--error);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.pending {
+  background-color: var(--pending);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus.success {
+  background-color: var(--success);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus object {
+  height: calc(100% - 0.7em);
+  width: auto;
+  filter: invert(100%);
+}
+.contact-parrent .contact-container #contact-form div.submit #msgStatus p {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 0.2em;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0.2;
+    transform: translateY(130%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */

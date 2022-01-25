@@ -1,0 +1,16 @@
+.stuff-container {
+    > h3 {
+    }
+    ul {
+        li {
+            list-style: square;
+            > h3 {
+            }
+
+            img {
+                width: 100%;
+                max-width: 90vw;
+            }
+        }
+    }
+}

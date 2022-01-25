@@ -1,0 +1,157 @@
+body {
+    background: var(--dim), url(/images/background/abstract-19.jpg);
+    background-size: cover;
+}
+
+.education-container {
+    > h1 {
+        // main title
+        font-size: 300%;
+    }
+    #current {
+        .current-container {
+            > h4 {
+                margin-block: 0.75rem;
+            }
+            .current-content {
+                position: relative;
+                min-height: 25rem;
+                z-index: 1;
+                // overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // background-color: tomato;
+
+                .current-text {
+                    font-size: 1.4rem;
+                    padding: 1rem 1rem 4rem 1rem;
+                    background: var(--color-background-transparent-semi);
+                    backdrop-filter: var(--blur-medium);
+                    border-radius: 0.8rem;
+
+                    div:nth-of-type(1) {
+                        // title
+                        display: flex;
+                        gap: 1em;
+                        color: magenta;
+
+                        h1 {
+                            color: yellow;
+                            font-family: var(--font-mono);
+                        }
+                    }
+                    div:nth-of-type(2) {
+                        // paragraph
+                        color: magenta;
+
+                        p {
+                            padding-inline-start: 3em;
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+                > img {
+                    width: min(80vw, 35rem);
+                    right: 0;
+                    transform: translateY(-3rem);
+                    border-radius: 0.7rem;
+
+                    box-shadow: var(--shadow);
+                    animation: slideUp 1.8s forwards ease-out;
+                }
+            }
+        }
+    }
+    #all-list {
+        .all-wrapper {
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-block: 1rem;
+
+                li {
+                    list-style: none;
+                    background: white;
+                    color: var(--color-background);
+
+                    width: 100%;
+                    padding: 0.6rem;
+                    // margin-block: .8rem;
+                    border-radius: 0.3em;
+
+                    display: flex;
+                    justify-content: space-between;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        box-shadow: var(--shadow);
+                    }
+
+                    div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+
+                        p {
+                            // visibility: hidden;
+                            opacity: 0;
+                            position: absolute;
+                            right: calc(100% + 1rem);
+                            bottom: 0;
+                            transition: 0.2s ease;
+
+                            background: var(--color-foreground);
+                            box-shadow: var(--shadow-smooth);
+                            padding: 1rem;
+                            border-radius: 0.3em;
+
+                            max-width: 20em;
+                            word-wrap: break-word;
+                        }
+                        button {
+                            border: none;
+                            height: 2em;
+                            aspect-ratio: 1;
+
+                            background: #00000000;
+                            font-size: 120%;
+                            color: var(--color-background);
+                            border-radius: 0.3em;
+
+                            transition: 0.2s ease;
+                            outline: 3px solid #00000000;
+                        }
+
+                        &:focus-within {
+                            button {
+                                background: var(--color-background-medium);
+                                color: var(--color-foreground);
+                                outline: 1px solid #f9f9f9;
+                                box-shadow: var(--shadow-smooth);
+                            }
+                            p {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(5rem);
+    }
+    100% {
+        transform: translateY(-3rem);
+    }
+}

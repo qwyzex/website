@@ -1,0 +1,111 @@
+body {
+  background: var(--color-background);
+}
+
+@media (max-width: 60rem) {
+  .post-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .post-header > span {
+    margin-top: 10px;
+    border-top: 2px solid var(--color-foreground);
+    padding: 0.6rem 1rem;
+  }
+  .post-header hr {
+    display: none;
+  }
+}
+@media (min-width: 60rem) {
+  .post-header {
+    display: grid;
+    grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr;
+    grid-template-areas: "tl tl tl tl" "de de de da";
+  }
+  .post-header > span {
+    border-bottom: 2px solid var(--color-foreground);
+    padding: 0.6rem 1rem;
+  }
+}
+.post-page {
+  padding-block-end: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.post-page .post-header {
+  outline: 2px solid var(--color-foreground);
+  padding: 2rem;
+}
+.post-page .post-header > h1 {
+  grid-area: tl;
+  font-size: 2.2em;
+  text-align: left;
+  width: 100%;
+  justify-self: flex-start;
+  transition: 0.3s ease;
+  transition-delay: 0;
+  cursor: default;
+}
+.post-page .post-header > h1:hover {
+  color: var(--accent);
+}
+.post-page .post-header > p {
+  grid-area: de;
+}
+.post-page .post-header > span {
+  width: max-content;
+  height: max-content;
+  justify-self: right;
+  grid-area: da;
+  font-weight: 600;
+  text-align: right;
+}
+.post-page .article-body {
+  background: var(--color-background-medium);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 1.2rem 1.5rem #03030540;
+  position: relative;
+  box-shadow: 0 -1rem 0 #ff003c;
+}
+.post-page .article-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5em;
+}
+.post-page .article-footer > ul li {
+  list-style: none;
+}
+.post-page .article-footer > ul li a {
+  padding: 1rem;
+}
+.post-page .article-footer > ul li a.twitter {
+  background-color: lightblue;
+}
+.post-page .article-footer > ul li a.facebook {
+  background-color: blue;
+}
+.post-page .article-footer > ul li a.whatsapp {
+  background-color: green;
+}
+.post-page .article-footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.post-page .article-footer > div * {
+  width: max-content;
+}
+.post-page .article-footer > div a {
+  color: var(--color-foreground);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: var(--color-background-transparent-bold);
+  padding: 0.5em 0.8em;
+  border-radius: 0.3em;
+}
+
+/*# sourceMappingURL=page.css.map */

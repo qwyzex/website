@@ -1,0 +1,268 @@
+body {
+    background: var(--dim), url("/images/background/abstract-18.jpg") no-repeat;
+    background-size: cover;
+}
+@media (max-width: 35rem) {
+    // 1
+    .skills-list-container {
+        ul {
+            width: 230px;
+        }
+    }
+}
+@media (min-width: 35rem) {
+    // 2
+    .skills-list-container {
+        ul {
+            width: 445px;
+        }
+    }
+}
+@media (min-width: 50rem) {
+    // 3
+    .skills-list-container {
+        ul {
+            width: 660px;
+        }
+    }
+}
+@media (min-width: 65rem) {
+    // 4
+    .skills-list-container {
+        ul {
+            width: 875px;
+        }
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding-block: 3rem;
+    text-align: center;
+
+    .skills-title {
+        text-align: center;
+    }
+
+    // universal
+    div {
+        ul {
+            max-width: 92vw;
+            transition: 0.6s ease;
+
+            li {
+                cursor: default;
+                transition: 0.6s ease;
+            }
+        }
+    }
+
+    .skills-list-container {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+
+            padding: 1rem;
+            background: var(--color-background-transparent-semi);
+            backdrop-filter: blur(6px);
+            border-radius: 0.4em;
+
+            &:hover {
+                li {
+                    filter: brightness(60%);
+                }
+            }
+
+            li {
+                // background-color: white;
+                color: black;
+                border-radius: 0.2em;
+
+                list-style: none;
+                height: 130px;
+                width: 200px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transition: 0.4s ease;
+                position: relative;
+                overflow: hidden;
+
+                &:hover {
+                    box-shadow: 0 -2rem 2rem -1rem rgb(5, 5, 5, 0.7) inset;
+                    filter: brightness(100%);
+
+                    object {
+                        transform: translateY(-5px);
+                    }
+                    p {
+                        transform: translateY(0);
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                object {
+                    height: 4rem;
+                    width: auto;
+                    transition: 0.3s ease;
+                }
+                p {
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateY(1rem);
+                    transition: 0.5s ease;
+                    position: absolute;
+                    bottom: 0;
+                    font-family: var(--font-body);
+                    font-weight: 600;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .skills-to-learn-container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+
+        gap: 3rem;
+        width: 100%;
+        padding: min(5vw, 4rem);
+
+        background: var(--color-background-transparent-semi);
+        backdrop-filter: blur(6px);
+        border-radius: 0.4em;
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            li {
+                width: 100%;
+                padding: 1rem;
+                outline: 3px solid gold;
+                border-radius: 0.3rem;
+
+                position: relative;
+
+                list-style: none;
+                font-weight: 400;
+                transition: 0.5s ease;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                overflow: hidden;
+
+                &.better {
+                    &:hover {
+                        background-color: greenyellow;
+                        outline: 0px solid #00000000;
+                        color: black;
+                    }
+                }
+                &:hover {
+                    background-color: gold;
+                    outline: 0px solid #00000000;
+                    color: black;
+
+                    object {
+                        filter: grayscale(0);
+
+                        &.background {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                object {
+                    height: 3rem;
+                    width: auto;
+                    filter: grayscale(100%);
+                    transition: 0.4s ease;
+
+                    &.background {
+                        opacity: 0;
+
+                        height: 12rem;
+                        width: auto;
+                        filter: grayscale(100%);
+                        transition: 0.4s ease;
+
+                        position: absolute;
+                        left: 20%;
+                    }
+                }
+            }
+        }
+    }
+    .non-tech-skills-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        ul {
+            @mixin general-list {
+                background: rgb(241, 241, 241);
+                border-radius: 0.3rem;
+                padding: 1rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            @include general-list();
+
+            text-align: center;
+            gap: 1rem;
+
+            &:hover {
+                li {
+                    outline: 1px solid rgb(241, 241, 241);
+                }
+            }
+
+            li {
+                @include general-list();
+
+                list-style: none;
+                outline: 1px solid #c2c2c2;
+                width: 100%;
+                color: #111111;
+                transition: 0.2s ease;
+
+                &:hover {
+                    box-shadow: var(--shadow-smooth);
+                }
+
+                h4 {
+                    font-size: 1.2rem;
+                }
+                p {
+                }
+            }
+        }
+    }
+}

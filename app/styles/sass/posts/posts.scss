@@ -1,0 +1,108 @@
+body {
+    // background: var(--dim), url("/images/background/abstract-14.jpg");
+    // background-size: cover;
+
+    background: linear-gradient(
+        80deg,
+        var(--color-background-medium),
+        var(--color-background-medium-transparent-bold)
+    );
+}
+
+.main {
+    border-block-start: 2px solid var(--color-foreground);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 60rem) {
+    .page {
+        .posts-container {
+            li {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (min-width: 60rem) {
+    .page {
+        .posts-container {
+            li {
+                display: grid;
+                grid-template-columns: 1fr max-content;
+            }
+        }
+    }
+}
+
+.nav-items {
+    a {
+        &.posts {
+            &::before {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.page {
+    > h1 {
+        font-size: 3em;
+    }
+    .posts-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding-block: 2rem;
+
+        li {
+            list-style: none;
+            // border-radius: 0.4em;
+            background-color: var(--transparent-semi);
+            outline: 2px solid #00000000;
+
+            padding: 1rem;
+
+            position: relative;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-0.6em);
+                outline: 2px solid var(--color-foreground);
+            }
+
+            &:active {
+                transform: translateY(-0.4em);
+            }
+
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1.2em;
+
+                color: var(--color-foreground);
+                width: 100%;
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p {
+                &.date {
+                    color: var(--color-foreground-medium);
+                }
+                &.description {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

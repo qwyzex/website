@@ -1,0 +1,70 @@
+body {
+    &.isAdmin {
+        background: red !important;
+    }
+}
+
+.admin-container {
+    padding-block-end: 2rem;
+
+    .admin {
+        display: flex;
+        overflow: hidden;
+
+        > nav {
+            padding-right: 2rem;
+            transition: 0.4s ease;
+            width: 16rem;
+            overflow: hidden;
+
+            &.closed {
+                margin-left: -16rem;
+                // transform: translateX(-100%);
+            }
+
+            ul {
+                li {
+                    a {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        > main {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            flex: 1;
+            border-left: solid 1px #ccc;
+            padding-left: 2rem;
+
+            /* .account-panel-container {
+             ** ...style
+            } */
+
+            /* .new-post-form-container {
+             ** ...style
+            } */
+        }
+    }
+}
+
+.admin-action-list {
+    > h1 {
+        font-weight: 600;
+    }
+
+    li {
+        list-style: inside;
+
+        a {
+            color: var(--success);
+        }
+    }
+}
+
+em {
+    color: var(--error);
+}

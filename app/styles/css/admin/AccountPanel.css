@@ -1,0 +1,147 @@
+@media (max-width: 65rem) {
+  .account-panel-container section {
+    flex-direction: column;
+  }
+  .account-panel-container section > .user-info > div {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.4em;
+  }
+  .account-panel-container section > .user-info > div.uid-container {
+    gap: 0.3em;
+  }
+  .account-panel-container section > .user-info > div label {
+    width: max-content;
+  }
+}
+@media (min-width: 65rem) {
+  .account-panel-container section {
+    flex-direction: row;
+  }
+  .account-panel-container section > .user-info div {
+    gap: 0.4em;
+  }
+  .account-panel-container section > .user-info div label {
+    width: 7rem;
+  }
+}
+.account-panel-container {
+  background: linear-gradient(100deg, #e4e4e4, #e1c8f5);
+  color: var(--color-background);
+  padding: 2rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0 3px #30303060 inset;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.account-panel-container section {
+  display: flex;
+  gap: 1rem;
+}
+.account-panel-container section > .user-pfp img {
+  height: 6rem;
+  border-radius: 0.8em;
+}
+.account-panel-container section > .user-info > span {
+  display: flex;
+  align-items: baseline;
+}
+.account-panel-container section > .user-info .username {
+  display: flex;
+}
+.account-panel-container section > .user-info .username p {
+  font-weight: 600;
+}
+.account-panel-container section > .user-info .email {
+  display: flex;
+}
+.account-panel-container section > .user-info .email p {
+  font-weight: 600;
+}
+.account-panel-container section > .user-info .uid-container {
+  display: flex;
+}
+.account-panel-container section > .user-info .uid-container .uid-wrapper {
+  display: flex;
+  gap: 0.4rem;
+}
+.account-panel-container section > .user-info .uid-container .uid-wrapper input {
+  font-family: var(--font-mono);
+  width: max-content;
+  color: #f5f5f5;
+  background-color: var(--color-background);
+  border: none;
+  outline: none;
+  padding: 0.2em 0.6em;
+}
+.account-panel-container section > .user-info .uid-container > button {
+  border: none;
+  outline: 2px solid #00000000;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.6em;
+  transition: 0.3s ease;
+}
+.account-panel-container section > .user-info .uid-container > button:hover {
+  background-color: gainsboro;
+}
+.account-panel-container section > .user-info .uid-container > button:active {
+  outline: 2px solid var(--color-background);
+  background-color: #c2c2c2;
+}
+.account-panel-container .buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.account-panel-container .buttons-wrapper .auth-button {
+  border: none;
+  border-radius: 0;
+  outline: 2px solid #00000000;
+  width: max-content;
+  background-color: #f5f5f5;
+  padding: 1em;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.account-panel-container .buttons-wrapper .auth-button:hover {
+  transform: translateY(-0.6em);
+  outline: 2px solid var(--color-background);
+}
+.account-panel-container .buttons-wrapper .auth-button:hover:active {
+  transform: translateY(-0.3em);
+}
+.account-panel-container .buttons-wrapper .hide-posts-list-button {
+  border: none;
+  outline: 2px solid #00000000;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.6em;
+  transition: 0.3s ease;
+}
+.account-panel-container .buttons-wrapper .hide-posts-list-button:hover {
+  background-color: gainsboro;
+}
+.account-panel-container .buttons-wrapper .hide-posts-list-button:active {
+  outline: 2px solid var(--color-background);
+  background-color: #c2c2c2;
+}
+
+.not-admin-warning {
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.3em;
+  padding: 1.4rem;
+  background-color: var(--error);
+  color: #f5f5f5;
+}
+.not-admin-warning * {
+  font-family: var(--font-mono) !important;
+}
+.not-admin-warning object {
+  height: 4rem;
+  filter: invert(100%);
+}
+
+/*# sourceMappingURL=AccountPanel.css.map */

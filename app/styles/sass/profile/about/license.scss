@@ -1,0 +1,35 @@
+body {
+    background: var(--dim), url("/images/background/abstract-12.jpg");
+}
+
+.app {
+    backdrop-filter: blur(1em);
+}
+
+.license-text {
+    margin: 0.3em !important;
+    padding: 0.3em 0.6em !important;
+
+    &::before {
+        margin: 0.3em !important;
+        padding: 0.3em 0.6em !important;
+    }
+    &::after {
+        margin: 0.3em !important;
+        padding: 0.3em 0.6em !important;
+    }
+
+    * {
+        margin: 0.3em !important;
+        padding: 0.3em 0.6em !important;
+
+        &::before {
+            margin: 0.3em !important;
+            padding: 0.3em 0.6em !important;
+        }
+        &::after {
+            margin: 0.3em !important;
+            padding: 0.3em 0.6em !important;
+        }
+    }
+}
