@@ -1,14 +1,8 @@
-import { json, useLoaderData } from "remix";
 import eduStyle from "~/styles/css/education/education.css";
 import RouteNav from "../../components/RouteNav";
 
 export let links = () => {
-    return [
-        {
-            rel: "stylesheet",
-            href: eduStyle,
-        },
-    ];
+    return [{ rel: "stylesheet", href: eduStyle }];
 };
 
 export let meta = () => {
@@ -18,98 +12,87 @@ export let meta = () => {
     };
 };
 
-export let loader = () => {
-    let data = {
-        school: [
-            {
-                name: "TK PKK 1 Yosodadi",
-                desc: "blablabla",
-            },
-            {
-                name: "SD 4 Metro Timur",
-                url: "https://google.com",
-                desc: "blablabla",
-            },
-            {
-                name: "SMP 2 Metro Timur",
-                url: "https://smpn2metro.sch.id/",
-                desc: "blablabla",
-            },
-        ],
-    };
+import { db } from "~/root";
+import { collection, query, orderBy, limit } from "firebase/firestore";
+import { useCollectionData } from "react-firebase-hooks/firestore";
 
-    return json(data);
-};
+const schoolsRef = collection(db, "schools");
+const q = query(schoolsRef, orderBy("yearIn"));
+const qLast = query(schoolsRef, orderBy("yearIn", "desc"), limit(1));
 
 const Education = () => {
+    const [schools] = useCollectionData(q, { idField: "id" });
+    
     return (
         <div className="education-container">
             <RouteNav index={false} text="profile" />
-            <h1>Education</h1>
-            <section id="current">
-                <SchoolCurrent />
-            </section>
-            <section id="all-list">
-                <SchoolList />
-            </section>
+            {schools ? (
+                <>
+                    <CurrentSchool />
+                    <AllSchool />
+                </>
+            ) : (
+                <h1>Loading...</h1>
+            )}
         </div>
     );
 };
 
-const SchoolList = () => {
-    let data = useLoaderData();
-
+const CurrentSchool = () => {
+    const [schoolCurrent] = useCollectionData(qLast, { idField: "id" });
+    
     return (
-        <div className="all-wrapper">
-            <h4 className="cascade">// All Schools</h4>
-            {data.school.map((schools) => (
-                <ul>
-                    <li>
-                        <h1>{schools.name}</h1>
-                        <div>
-                            <button className="info-button">?</button>
-                            <p className="info-desc">{schools.desc}</p>
-                        </div>
-                    </li>
-                </ul>
-            ))}
-        </div>
-    );
-};
-
-const SchoolCurrent = () => {
-    let data = useLoaderData();
-
-    var cbo = " {",
-        cbc = "} ";
-
-    return (
-        <div className="current-container">
-            <h4 className="current-title cascade">// CURRENTLY on</h4>
-            <div className="current-content">
-                {data.school.map((cs) => (
-                    <>
-                        <article className="current-text" key={cs}>
-                            <div key={cs.name}>
-                                <h1 className="current-school">
-                                    {cs.name.toLowerCase().replace(/ /g, "_")}()
-                                </h1>
-                                {cbo}
-                            </div>
-                            <div key={cs.desc}>
-                                <p className="current-par">{cs.desc}</p>
-                                {cbc}
-                            </div>
-                        </article>
-                        <img
-                            key={cs.img}
-                            src={cs.img}
-                            alt="current-school-pic"
-                        />
-                    </>
-                ))}
+        <section id="current">
+            <div className="current-container">
+                <h1 className="current-title">CURRENT</h1>
+                <div className="current-content">
+                    {schoolCurrent &&
+                        schoolCurrent.map((sc) => (
+                            <>
+                                <article className="current-text">
+                                    <div>
+                                        <h1 className="current-school">
+                                            {"const "}
+                                            {sc.name.toLowerCase().replace(/ /g, "_")}
+                                            {` = ({ ${sc.yearIn} }) =>`}
+                                        </h1>
+                                        {"("}
+                                    </div>
+                                    <div>
+                                        <p className="current-par">{sc.description}</p>
+                                        {")"}
+                                    </div>
+                                </article>
+                                <img src={sc.image} alt={`${sc.name} Picture`} />
+                            </>
+                        ))}
+                </div>
             </div>
-        </div>
+        </section>
+    );
+};
+
+const AllSchool = () => {
+    const [schools] = useCollectionData(q, { idField: "id" });
+
+    return (
+        <section id="all-list">
+            <div className="all-wrapper">
+                <h4 className="cascade">// All Schools</h4>
+                {schools &&
+                    schools.map((sl) => (
+                        <ul>
+                            <li>
+                                <h1>{sl.name}</h1>
+                                <div>
+                                    <button className="info-button">?</button>
+                                    <p className="info-desc">{sl.description}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    ))}
+            </div>
+        </section>
     );
 };
 
