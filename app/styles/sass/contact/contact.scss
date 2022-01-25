@@ -1,6 +1,6 @@
 body {
     // background: var(--dim), url("/images/background/abstract-18.jpg");
-    background: linear-gradient(120deg, #ff7519, #ff8d9c);
+    background: linear-gradient(120deg, #240ee7, #222847);
 }
 
 #header {
@@ -79,9 +79,9 @@ body {
         width: 7rem;
         height: 7rem;
         background: linear-gradient(04deg, gold, orange);
-        border-radius: .6em;
+        border-radius: 1.4em;
 
-        animation: spinn 3s linear infinite;
+        // animation: spinn 33s linear infinite;
         box-shadow: 0 0 15px #ffd700d4;
     }
 
@@ -256,6 +256,9 @@ body {
 }
 
 @keyframes spinn {
+    from {
+        transform: rotate(0);
+    }
     to {
         transform: rotate(360deg);
     }

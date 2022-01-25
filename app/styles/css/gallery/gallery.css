@@ -97,7 +97,7 @@ body {
   color: #ffffff !important;
 }
 .gallery-container div.projects > section .card > header:hover:active::before {
-  filter: brightness(160%);
+  filter: brightness(120%);
 }
 .gallery-container div.projects > section .card > header:hover::before {
   transition: 0.2s ease;
