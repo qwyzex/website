@@ -109,11 +109,12 @@ const SchoolCurrent = () => {
                                 {cbc}
                             </div>
                         </article>
-                        <img
-                            key={currents.img}
-                            src={currents.img}
-                            alt="current-school-pic"
-                        />
+                        {currents.img && 
+                            <img
+                                key={currents.img}
+                                src={currents.img}
+                                alt="current-school-pic"
+                            />}
                     </>
                 ))}
             </div>
