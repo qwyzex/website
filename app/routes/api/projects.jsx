@@ -1,5 +1,5 @@
 // prettier-ignore
-export const projects = [
+const projects = [
     {
         name: "AXC",
         codename: "attemp-x",
@@ -23,7 +23,7 @@ export const projects = [
         date: "2021-10-13",
         type: "medium",
         index: 2
-    },
+    }/* ,
     {
         name: "qxBash",
         codename: "qxbash",
@@ -34,5 +34,9 @@ export const projects = [
         date: "2021-9-5",
         type: "mini",
         index: 1
-    }
+    } */
 ];
+
+export default function (req, res) {
+    res.status(200).json(projects);
+}

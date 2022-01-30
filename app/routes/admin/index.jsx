@@ -8,7 +8,7 @@ export default function AdminIndex() {
                 <Link to="./newpost">CREATE NEW POST</Link>
             </li>
             <li>
-                <Link to="./newproject">UPDATE NEW PROJECT</Link>
+                <Link to="./newproject">POST NEW PROJECT</Link>
             </li>
             <li>
                 <Link to="./newschool">UPDATE NEW SCHOOL</Link>

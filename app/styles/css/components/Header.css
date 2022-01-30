@@ -14,10 +14,15 @@
     max-width: 100vw;
     height: 100vh;
     padding: min(20vh, 8rem) 6rem;
-    background: var(--color-background-transparent-bold);
-    backdrop-filter: blur(1rem);
+    background: var(--transparent-bold);
     border-inline-start: var(--border);
     transition: transform 0.5s ease;
+  }
+  @supports (backdrop-filter: blur()) {
+    .navigation {
+      background: var(--transparent-semi);
+      backdrop-filter: blur(1rem);
+    }
   }
   .navigation.open {
     transform: translateX(0);

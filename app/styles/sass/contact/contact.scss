@@ -4,7 +4,10 @@ body {
 }
 
 #header {
-    background: linear-gradient(var(--color-background-medium-transparent-bold), #00000000);
+    background: linear-gradient(
+        var(--color-background-medium-transparent-bold),
+        #00000000
+    );
 }
 
 .nav-items a.contact {
@@ -75,13 +78,13 @@ body {
         position: absolute;
         top: 2rem;
         right: 8rem;
-        
+
         width: 7rem;
         height: 7rem;
         background: linear-gradient(04deg, gold, orange);
         border-radius: 1.4em;
 
-        // animation: spinn 33s linear infinite;
+        animation: spinn 3s linear infinite;
         box-shadow: 0 0 15px #ffd700d4;
     }
 

@@ -52,15 +52,14 @@ const CurrentSchool = () => {
                                 <article className="current-text">
                                     <div>
                                         <h1 className="current-school">
-                                            {"const "}
                                             {sc.name.toLowerCase().replace(/ /g, "_")}
-                                            {` = ({ ${sc.yearIn} }) =>`}
+                                            {`({ ${sc.yearIn} })`}
                                         </h1>
-                                        {"("}
+                                        {"{"}
                                     </div>
                                     <div>
                                         <p className="current-par">{sc.description}</p>
-                                        {")"}
+                                        {"}"}
                                     </div>
                                 </article>
                                 <img src={sc.image} alt={`${sc.name} Picture`} />

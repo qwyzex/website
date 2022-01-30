@@ -65,6 +65,7 @@ body {
   height: 7rem;
   background: linear-gradient(4deg, gold, orange);
   border-radius: 1.4em;
+  animation: spinn 3s linear infinite;
   box-shadow: 0 0 15px #ffd700d4;
 }
 .contact-parrent .contact-container {

@@ -72,6 +72,34 @@ a {
 a:hover {
   text-decoration: underline;
 }
+a.essentials-link {
+  text-decoration: none;
+  position: relative;
+  opacity: 1;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.essentials-link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 3px;
+  background-color: currentColor;
+  color: var(--accent);
+  transition: 0.3s ease;
+}
+a.essentials-link:hover {
+  opacity: 0.8;
+}
+a.essentials-link:hover::before {
+  width: 100%;
+}
+a.essentials-link:active {
+  color: var(--accent) !important;
+}
 a.cool {
   margin-block: 0.3em;
   padding: 0.4em;
@@ -190,35 +218,6 @@ body {
 
 button {
   cursor: pointer;
-}
-
-a.essentials-link {
-  text-decoration: none;
-  position: relative;
-  opacity: 1;
-  transition: 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-a.essentials-link::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  color: var(--accent);
-  transition: 0.3s ease;
-}
-a.essentials-link:hover {
-  opacity: 0.8;
-}
-a.essentials-link:hover::before {
-  width: 100%;
-}
-a.essentials-link:active {
-  color: var(--accent) !important;
 }
 
 code {

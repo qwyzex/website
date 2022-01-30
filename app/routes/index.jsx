@@ -1,5 +1,5 @@
 import { Link } from "remix";
-import { projects } from "~/data/projects";
+import { useEffect, useState } from "react";
 import indexStyle from "~/styles/css/index/index.css";
 
 export let links = () => {
@@ -54,7 +54,16 @@ const Landing = () => {
 };
 
 const LandingProjects = () => {
-    projects.length = 2;
+    const [landingProjectsData, setLandingProjectsData] = useState(null);
+
+    useEffect(() => {
+        async function fetchProjects() {
+            const res = await fetch("/api/projects");
+            const data = res.json();
+            setLandingProjectsData(data);
+        }
+        fetchProjects();
+    }, []);
 
     return (
         <div className="landing-projects">
@@ -62,35 +71,39 @@ const LandingProjects = () => {
             <img src="/images/svg/triangle.svg" className="triangle-1" />
             <img src="/images/svg/triangle.svg" className="triangle-2" />
             <ul>
-                {projects
-                    .sort((a, b) => {
-                        return b.index - a.index;
-                    })
-                    .map((p) => (
-                        <li key={p.codename}>
-                            <div key={p.codename} className="project-info">
-                                <h3 key={p.name}>{p.name}</h3>
-                                <p key={p.desc}>{p.desc}</p>
-                                <span className="cascade" key={p.date}>
-                                    {p.date}
-                                </span>
-                                <a href={`/gallery#${p.codename}`}>
-                                    <span></span>
-                                </a>
-                            </div>
-                            <div key={p.repo} className="project-links">
-                                {p.demo ? (
-                                    <a href={p.demo} key={p.demo} target="_blank">
-                                        DEMO
+                {landingProjectsData ? (
+                    landingProjectsData
+                        .sort((a, b) => {
+                            return b.index - a.index;
+                        })
+                        .map((p) => (
+                            <li key={p.codename}>
+                                <div key={p.codename} className="project-info">
+                                    <h3 key={p.name}>{p.name}</h3>
+                                    <p key={p.desc}>{p.desc}</p>
+                                    <span className="cascade" key={p.date}>
+                                        {p.date}
+                                    </span>
+                                    <a href={`/gallery#${p.codename}`}>
+                                        <span></span>
                                     </a>
-                                ) : null}
+                                </div>
+                                <div key={p.repo} className="project-links">
+                                    {p.demo ? (
+                                        <a href={p.demo} key={p.demo} target="_blank">
+                                            DEMO
+                                        </a>
+                                    ) : null}
 
-                                <a href={p.repo} key={p.repo} target="_blank">
-                                    REPO
-                                </a>
-                            </div>
-                        </li>
-                    ))}
+                                    <a href={p.repo} key={p.repo} target="_blank">
+                                        REPO
+                                    </a>
+                                </div>
+                            </li>
+                        ))
+                ) : (
+                    <h1>Loading</h1>
+                )}
             </ul>
             <div className="gallery-redirect">
                 <Link to="/gallery" className="cool">
