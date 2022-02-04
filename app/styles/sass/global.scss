@@ -82,10 +82,10 @@ a {
         text-decoration: underline;
     }
 
-    &.essentials-link {
+    &.essentials {
         text-decoration: none;
         position: relative;
-        opacity: 1;
+        opacity: 0.9;
         transition: 0.3s ease;
     
         display: flex;
@@ -97,14 +97,16 @@ a {
             position: absolute;
             top: 100%;
             width: 0;
-            height: 3px;
+            height: 5px;
     
             background-color: currentColor;
             color: var(--accent);
             transition: 0.3s ease;
         }
         &:hover {
-            opacity: 0.8;
+            opacity: 1 !important;
+            text-shadow: 0 0 .8rem var(--accent) !important;
+
             &::before {
                 width: 100%;
             }
