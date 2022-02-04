@@ -8,11 +8,11 @@ export interface FillTextColors {
 		| 'orange'
 		| 'purple'
 		| 'pink';
-    children: any
+	children?: any
 }
 
-const FillText = (props: FillTextColors, { children }: any) => {
-	return <span className={`filltext ${props.color}`}>{children}</span>;
+const FillText = (props: FillTextColors) => {
+	return <span className={`filltext ${props.color}`}>{props.children}</span>;
 };
 
 export default FillText;
