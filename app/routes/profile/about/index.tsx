@@ -30,8 +30,8 @@ const assets = [
 		size: '53kb',
 	},
 	{
-		name: 'q',
-		url: '/images/svg/indeColorText.svg',
+		name: 'qx idle animation',
+		url: '/images/svg/index-4.svg',
 		width: '~ px',
 		height: '~ px',
 		size: '6.5kb',
@@ -78,7 +78,7 @@ export default function About() {
 
 	return (
 		<div className='about-container'>
-			<RouteNav index='custom' custom='/profile' text='profile' />
+			<RouteNav href='/profile' text='profile' />
 			<h1>About This Website</h1>
 			<article>
 				<h3 className='cascade link-content' id='what-is-this-made-of'>
@@ -93,13 +93,13 @@ export default function About() {
 					<a target='_blank' href='https://qwyzex.netlify.app'>
 						https://qwyzex.netlify.app
 					</a>
-					. At first, I see <ColorText ex='nodejs'>NodeJS</ColorText> is
-					just gonna make my site load longer as they had a crazy sh*t
-					in "node_modules" folder. I started to intrested in{' '}
+					. At first, I see <ColorText ex='nodejs'>NodeJS</ColorText>{' '}
+					is just gonna make my site load longer as they had a crazy
+					sh*t in "node_modules" folder. I started to intrested in{' '}
 					<ColorText ex='react'>React</ColorText> after re-watching
 					Fireship video about reverse-engineering the Facebook's
-					dropdown menu with <ColorText ex='react'>React</ColorText> and
-					Tailwind CSS. Then there's some hype around about{' '}
+					dropdown menu with <ColorText ex='react'>React</ColorText>{' '}
+					and Tailwind CSS. Then there's some hype around about{' '}
 					<ColorText ex='remix'>Remix</ColorText>, a brand new
 					JavaScript Framework (Actually already running since 2019
 					but it's paid, then recently they make it free and
@@ -113,10 +113,10 @@ export default function About() {
 					and paste some main components from one file to another html
 					file. And since in that time I had quite some files... It's
 					stressing me out. I watch some{' '}
-					<ColorText ex='react'>React</ColorText> tutorial and I quickly
-					understand how reusable-components work. Firstly I tried{' '}
-					<ColorText ex='react'>React CDN</ColorText>. And use babel as the
-					"translator" for ES6/JSX syntax. I only use{' '}
+					<ColorText ex='react'>React</ColorText> tutorial and I
+					quickly understand how reusable-components work. Firstly I
+					tried <ColorText ex='react'>React CDN</ColorText>. And use
+					babel as the "translator" for ES6/JSX syntax. I only use{' '}
 					<ColorText ex='react'>React</ColorText> for rendering basic
 					components like header and footer. It work flawlessly, but
 					to be fair, it kills the performance of my website. It loads
@@ -182,23 +182,30 @@ export default function About() {
 					<h3>Performance</h3>
 					<p>
 						Maybe the biggest performance decrementials affect my
-						site is when I use <ColorText ex='react'>React</ColorText>{' '}
-						and <ColorText ex='babel'>Babel</ColorText> both trough
-						CDN. It's literally killing the UX, as the header and
-						footer is loaded using{' '}
-						<ColorText ex='react'>React</ColorText> components. And
-						using <ColorText ex="babel">Babel</ColorText> straighly to
-						the browser is indeed not a good idea.
+						site is when I use{' '}
+						<ColorText ex='react'>React</ColorText> and{' '}
+						<ColorText ex='babel'>Babel</ColorText> both trough CDN.
+						It's literally killing the UX, as the header and footer
+						is loaded using <ColorText ex='react'>React</ColorText>{' '}
+						components. And using{' '}
+						<ColorText ex='babel'>Babel</ColorText> straighly to the
+						browser is indeed not a good idea.
 					</p>
 					<p>
 						And that is when I actually make a{' '}
-						<ColorText ex='react'>React</ColorText> app. And discover{' '}
-						<ColorText ex='remix'>Remix</ColorText> trough{' '}
-						<ColorText ex='react'><a href="https://fireship.io" target={'_blank'}>Fireship.io</a></ColorText> as the "new"{' '}
-						<ColorText ex='javascript'>Javascript</ColorText> Framework. Couple
-						days later after playing with plain React, I decided to
-						try out <ColorText ex='remix'>Remix</ColorText>. And I
-						never regret it...
+						<ColorText ex='react'>React</ColorText> app. And
+						discover <ColorText ex='remix'>Remix</ColorText> trough{' '}
+						<ColorText ex='react'>
+							<a href='https://fireship.io' target={'_blank'}>
+								Fireship.io
+							</a>
+						</ColorText>{' '}
+						as the "new"{' '}
+						<ColorText ex='javascript'>Javascript</ColorText>{' '}
+						Framework. Couple days later after playing with plain
+						React, I decided to try out{' '}
+						<ColorText ex='remix'>Remix</ColorText>. And I never
+						regret it...
 					</p>
 				</article>
 			</article>

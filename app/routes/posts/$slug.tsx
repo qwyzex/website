@@ -6,7 +6,7 @@ import RouteNav from '~/components/RouteNav';
 import pageStyle from '~/styles/css/posts/page.css';
 import FillText from '~/components/FillText';
 
-import type { LinksFunction } from "remix";
+import type { LinksFunction } from 'remix';
 
 export let links: LinksFunction = () => {
 	return [{ rel: 'stylesheet', href: pageStyle }];
@@ -25,7 +25,7 @@ export default function PostSlug() {
 			<head>
 				<title>{post.title} | qwyzeX</title>
 			</head>
-			<RouteNav index={false} text='post' />
+			<RouteNav text='post' href='/posts' />
 			<header className='post-header'>
 				<h1>{post.title}</h1>
 				<p>{post.desc}</p>

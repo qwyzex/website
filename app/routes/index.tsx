@@ -5,7 +5,7 @@ import indexStyle from '~/styles/css/index/index.css';
 import type { MetaFunction } from 'remix';
 import type { LinksFunction } from 'remix';
 import ColorText from '~/components/ColorText';
-import LoadingText from "~/components/LoadingText";
+import LoadingText from '~/components/LoadingText';
 
 export let links: LinksFunction = () => {
 	return [{ rel: 'stylesheet', href: indexStyle }];
@@ -62,21 +62,19 @@ const Landing = () => {
 
 const LandingProjects = () => {
 	const [landingProjectsData, setLandingProjectsData]: any[] = useState(null);
-
+	
 	useEffect(() => {
 		async function fetchProjects() {
 			const res = await fetch('/api/projects');
-			console.log(res);
 			const data = await res.json();
-			console.log(data);
 			setLandingProjectsData(data);
+
+			// debug
+			/* console.log(res);
+			console.log(data); */
 		}
 		fetchProjects();
 	}, []);
-
-	setTimeout(() => {
-		console.log(landingProjectsData);
-	}, 6000);
 
 	return (
 		<div className='landing-projects'>
@@ -85,7 +83,7 @@ const LandingProjects = () => {
 			<img src='/images/svg/triangle.svg' className='triangle-2' />
 			<ul>
 				{landingProjectsData ? (
-					landingProjectsData.map((p: any) => (
+					landingProjectsData.slice(0, 2).map((p: any) => (
 						<li key={p.codename}>
 							<div key={p.codename} className='project-info'>
 								<h3 key={p.name}>{p.name}</h3>
