@@ -13,3 +13,9 @@ You can contribute to this site! Spot a typo? Wrong definition etc. ? You can cl
 > ### Attribution-NonCommercial-ShareAlike 4.0 International
 > 
 > CC BY-NC-SA 4.0
+
+<hr/>
+
+> "There was so many SASS Styling that this repo is defined as SASS Repository, not Javascript nor Typescript"
+>
+> 2020-3-4
