@@ -66,22 +66,31 @@ export default function App() {
 export function ErrorBoundary({ error }: any) {
 	console.error(error);
 	return (
-		<div>
-			<h1>
-				There was a <FillText color='red'>fatal error</FillText> with
-				the ap
-			</h1>
-			{error.message}
-			<div className='error root'>
+		<Document title='Fatal Error!'>
+			<Layout>
 				<div>
-					Sorry for the inconvenience, there's an error with the
-					production state of the App. I will fix this soon. Please
-					contact me at{' '}
-					<FillText color='blue'>qwyzex@yandex.com</FillText> if this
-					is still occure for some time.
+					<h1>
+						There's a <FillText color='red'>fatal error</FillText>{' '}
+						with the app
+					</h1>
+					{process.env.NODE_ENV === 'development' ? (
+						error.message
+					) : (
+						<div className='error root'>
+							<div>
+								Sorry for the inconvenience, there's an error
+								with the production state of the App. I will fix
+								this soon. Please contact me at{' '}
+								<FillText color='blue'>
+									qwyzex@yandex.com
+								</FillText>{' '}
+								if this is still occure for some time.
+							</div>
+						</div>
+					)}
 				</div>
-			</div>
-		</div>
+			</Layout>
+		</Document>
 	);
 }
 
