@@ -1,21 +1,11 @@
-import { redirect } from "remix";
+// import { redirect } from "remix";
 
-export default function testApp() {
-    return () => {
-        throw new Error();
-    };
-    // return process.env.NODE_ENV === "development"
-    //     ? redirect("/")
-    //     : () => {
-    //           throw new Error();
-    //       };
+export const loader = () => {
+    const status = process.env.NODE_ENV
+
+    return status === 'development' && new Error('You Have No Permission To Access This Page')
 }
 
-export function ErrorBoundary({ error }) {
-    console.error(error);
-    return (
-        <div>
-            <h1>NO PERMISSION</h1>
-        </div>
-    );
+export default function TestApp() {
+    return <div></div>
 }

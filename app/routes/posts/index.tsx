@@ -2,25 +2,34 @@ import { useLoaderData, Link } from "remix";
 import { getPosts } from "~/post";
 import blogPostStyle from "~/styles/css/posts/posts.css";
 
-export let grandparrent = "posts";
+import type { LinksFunction, MetaFunction, LoaderFunction } from "remix";
 
-export let links = () => {
+export let links: LinksFunction = () => {
     return [{ rel: "stylesheet", href: blogPostStyle }];
 };
 
-export let meta = () => {
+export let meta: MetaFunction = () => {
     return {
         title: "Blog Posts",
         description: "My Personal Blog Posts",
     };
 };
 
-export const loader = () => {
+export const loader: LoaderFunction = () => {
     return getPosts();
 };
 
 export default function Posts() {
     const posts = useLoaderData();
+
+    interface PostMaps {
+        slug: string;
+        title: string;
+        desc: string;
+        tag?: string[];
+        id: number;
+        date: any;
+    }
 
     return (
         <div className="page">
@@ -28,14 +37,13 @@ export default function Posts() {
             <p className="cascade">All Post ({posts.length})</p>
             <ul className="posts-container">
                 {posts
-                    .sort(function (a, b) {
+                    .sort(function (a: any, b: any) {
                         return a.id - b.id;
                     })
                     .reverse()
-                    .map((p) => (
+                    .map((p: PostMaps) => (
                         <li
                             key={p.slug}
-                            className={p.tag}
                             title={`${p.title} | ${p.date.replace(
                                 /T00\:00\:00\.000Z$/,
                                 ""

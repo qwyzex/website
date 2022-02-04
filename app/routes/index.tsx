@@ -5,7 +5,7 @@ import indexStyle from '~/styles/css/index/index.css';
 import type { MetaFunction } from 'remix';
 import type { LinksFunction } from 'remix';
 import ColorText from '~/components/ColorText';
-import Loading from "~/components/Loading";
+import LoadingText from "~/components/LoadingText";
 
 export let links: LinksFunction = () => {
 	return [{ rel: 'stylesheet', href: indexStyle }];
@@ -115,7 +115,7 @@ const LandingProjects = () => {
 						</li>
 					))
 				) : (
-					<Loading />
+					<LoadingText />
 				)}
 			</ul>
 			<div className='gallery-redirect'>

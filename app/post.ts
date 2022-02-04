@@ -45,7 +45,7 @@ export async function getPost(slug: string) {
 
 // ...
 export async function createPost(post: any) {
-	const md = `---\ntitle: "${post.title}"\ndate: ${post.date}\nid: ${post.id}\ndesc: ${post.desc}\ntag: ${post.tag}\n---\n\n${post.markdown}`;
+	const md = `---\ntitle: "${post.title}"\ndate: ${post.date}\nid: ${post.id}\ndesc: "${post.desc}"\ntag: "${post.tag}"\n---\n\n${post.markdown}`;
 	await fs.writeFile(path.join(postsPath, post.slug + '.md'), md);
 	return getPost(post.slug);
 }
