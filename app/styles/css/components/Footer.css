@@ -1,0 +1,68 @@
+#footer {
+  min-height: 5rem;
+  padding: 2rem min(6vw, 10rem);
+  text-align: center;
+  width: 100%;
+  background: var(--dim-smooth);
+  backdrop-filter: var(--blur-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#footer .footer-content .footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(2vw, 4rem);
+}
+#footer .footer-content .footer-socials li {
+  list-style: none;
+}
+#footer .footer-content .footer-socials li a {
+  padding: 0.6rem;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+#footer .footer-content .footer-socials li a:hover {
+  transform: translateY(-0.4rem);
+}
+#footer .footer-content .footer-socials li a:active {
+  transform: translateY(-0.2rem);
+}
+#footer .footer-content .footer-socials li a.github:hover {
+  box-shadow: 0 0 2em -0.2em inset #0d1117;
+}
+#footer .footer-content .footer-socials li a.instagram:hover {
+  box-shadow: 0 0 2em -0.2em inset #ee1d4a;
+}
+#footer .footer-content .footer-socials li a.facebook:hover {
+  box-shadow: 0 0 2em -0.2em inset #2669ee;
+}
+#footer .footer-content .footer-socials li a.twitter:hover {
+  box-shadow: 0 0 2em -0.2em inset #1da1f2;
+}
+#footer .footer-content .footer-socials li a.youtube:hover {
+  box-shadow: 0 0 2em -0.2em inset #ff0000;
+}
+#footer .footer-content .footer-socials li a.contact:hover {
+  box-shadow: 0 0 2em -0.2em inset #ffd900;
+}
+#footer .footer-content .footer-socials li a img {
+  height: 2rem;
+  transition: 0.5s ease;
+}
+#footer .footer-content .copyright-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Footer.css.map */

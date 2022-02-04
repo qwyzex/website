@@ -1,0 +1,24 @@
+.route-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 0;
+
+    a {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.3em;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #ffffff60;
+        }
+    }
+}

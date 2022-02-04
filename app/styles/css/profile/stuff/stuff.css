@@ -1,0 +1,9 @@
+.stuff-container ul li {
+  list-style: square;
+}
+.stuff-container ul li img {
+  width: 100%;
+  max-width: 90vw;
+}
+
+/*# sourceMappingURL=stuff.css.map */

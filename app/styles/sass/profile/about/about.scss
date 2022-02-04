@@ -1,0 +1,140 @@
+body {
+    background: var(--dim), url("/images/background/abstract-10.jpg");
+    background-position: right;
+    background-size: cover;
+}
+
+@media (max-width: 35rem) {
+    .assets-wrapper {
+        flex-direction: column;
+    }
+}
+@media (min-width: 35rem) {
+    .assets-wrapper {
+        flex-direction: row;
+    }
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    > article {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        font-size: 1.2rem;
+
+        h3 {
+            width: max-content;
+        }
+
+        ul,
+        ol {
+            li {
+                list-style: inside;
+            }
+        }
+
+        article {
+            p {
+                margin: 1.2rem;
+            }
+        }
+    }
+
+    .assets {
+        > h1 {
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            > h3 {
+            }
+
+            .assets-wrapper {
+                display: flex;
+                gap: 2rem;
+                max-width: 90vw;
+
+                .assets-source {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        text-transform: uppercase;
+                        font-size: 1.2em;
+                        font-weight: 600;
+                    }
+
+                    img {
+                        width: 20rem;
+                        max-width: 80vw;
+                    }
+                }
+                .assets-data {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    padding: 1rem;
+                    background-color: var(--color-background-transparent-semi);
+                    border-radius: 0.4em;
+
+                    p {
+                        span {
+                            color: springgreen;
+                        }
+                    }
+                }
+            }
+        }
+        .license {
+            p {
+                &:last-of-type {
+                    padding-block-end: 20px;
+                }
+            }
+        }
+    }
+
+    #conclusion {
+        padding: 1rem;
+        margin-block-end: 2rem;
+        border-radius: 0.3em;
+
+        background: var(--color-background-transparent-semi);
+        transition: 0.3s ease;
+
+        &:hover {
+            background: var(--color-background-transparent-bold);
+            backdrop-filter: var(--blur-medium);
+        }
+
+        * {
+            width: max-content;
+        }
+
+        div {
+            ul,
+            ol {
+                li {
+                    list-style: inside;
+                    padding-inline-start: 1rem;
+                }
+            }
+        }
+
+        .reference {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+        }
+    }
+}

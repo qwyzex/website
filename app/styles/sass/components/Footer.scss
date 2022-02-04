@@ -1,0 +1,79 @@
+#footer {
+    min-height: 5rem;
+    padding: 2rem min(6vw, 10rem);
+    text-align: center;
+
+    width: 100%;
+    background: var(--dim-smooth);
+    // border-top: var(--border);
+    backdrop-filter: var(--blur-medium);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .footer-socials {
+            // ul
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: min(2vw, 4rem);
+
+            li {
+                list-style: none;
+
+                a {
+                    padding: 0.6rem;
+                    border-radius: 0.5em;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    transition: 0.5s ease;
+
+                    &:hover {
+                        transform: translateY(-0.4rem);
+                    }
+                    &:active {
+                        transform: translateY(-0.2rem);
+                    }
+
+                    &.github:hover {
+                        box-shadow: 0 0 2em -0.2em inset #0d1117;
+                    }
+                    &.instagram:hover {
+                        box-shadow: 0 0 2em -0.2em inset #ee1d4a;
+                    }
+                    &.facebook:hover {
+                        box-shadow: 0 0 2em -0.2em inset #2669ee;
+                    }
+                    &.twitter:hover {
+                        box-shadow: 0 0 2em -0.2em inset #1da1f2;
+                    }
+                    &.youtube:hover {
+                        box-shadow: 0 0 2em -0.2em inset #ff0000;
+                    }
+                    &.contact:hover {
+                        box-shadow: 0 0 2em -0.2em inset #ffd900;
+                    }
+
+                    img {
+                        height: 2rem;
+                        transition: 0.5s ease;
+                    }
+                }
+            }
+        }
+        .copyright-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
