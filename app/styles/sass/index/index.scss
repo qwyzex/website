@@ -137,6 +137,7 @@ main {
             }
             .learn-more-cont {
                 width: max-content;
+                font-family: var(--font-mono);
 
                 @include flex-row-center();
                 gap: 1em;
@@ -148,7 +149,6 @@ main {
                     padding: 0.6em 1em;
 
                     color: var(--accent);
-                    font-family: "Bergen Mono";
                     font-weight: 600;
                     letter-spacing: 3px;
                     text-decoration: none;
@@ -172,7 +172,6 @@ main {
                     color: white;
                     padding: 0.6em 1em;
 
-                    font-family: "Bergen Mono";
                     font-weight: 600;
                     letter-spacing: 3px;
                     text-decoration: none;

@@ -422,7 +422,7 @@ x-tom {
   border-radius: 0.3em;
   padding: 0.4em;
   transition: 0.2s;
-  font-family: "Poppins";
+  font-family: var(--font-mono);
   font-weight: 600;
   text-decoration: none;
 }

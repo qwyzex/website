@@ -90,8 +90,8 @@ export default function About() {
 					<ColorText ex='react'>React</ColorText> framework. Actually
 					this is my second personal / portofolio website. My old
 					website is still Live on{' '}
-					<a target='_blank' href='https://qwyzex.netlify.app'>
-						https://qwyzex.netlify.app
+					<a target='_blank' href='https://qwz.netlify.app'>
+						https://qwz.netlify.app
 					</a>
 					. At first, I see <ColorText ex='nodejs'>NodeJS</ColorText>{' '}
 					is just gonna make my site load longer as they had a crazy

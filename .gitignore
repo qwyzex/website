@@ -5,3 +5,6 @@ node_modules
 /.netlify
 /app/routes/test
 /test
+**/*.test.js
+**/*.spec.js
+**/*.css.map
