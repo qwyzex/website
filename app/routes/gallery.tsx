@@ -67,7 +67,7 @@ const GalleryProjects = () => {
 									target='_blank'
 									href={project.repo}
 								>
-									<span key={project.repo}></span>
+									<span></span>
 								</a>
 							</header>
 							<hr />
@@ -76,13 +76,12 @@ const GalleryProjects = () => {
 								className='description-wrapper'
 							>
 								{project.about.map((l: any) => (
-									<p key={l} className='description-items'>
+									<p className='description-items'>
 										{l}
 									</p>
 								))}
 							</div>
 							<footer
-								key={project.demo}
 								className={
 									project.type === 'big'
 										? 'big'
@@ -109,10 +108,9 @@ const GalleryProjects = () => {
 										: project.type === 'medium'
 										? 'med'
 										: 'mini'}{' '}
-									<p key={project.type}>Project</p>
+									<p>Project</p>
 								</span>
 								<p
-									key={project.demo}
 									className={project.demo ? 'hasDemo' : ''}
 								>
 									{project.date}
