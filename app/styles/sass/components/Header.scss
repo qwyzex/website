@@ -94,6 +94,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            .nav-items {
+                object {
+                    left: 115% !important;
+                }
+            }
         }
     }
 }
@@ -202,6 +208,33 @@
                     letter-spacing: 2px;
                     color: white;
                     font-weight: 600;
+
+                    position: relative;
+
+                    &:hover {
+                        object {
+                            opacity: .4;
+                        }
+                    }
+
+                    p {
+                        z-index: 2;
+                    }
+                    
+                    object {
+                        z-index: 1;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(0, -50%);
+                        transition: 0.2s ease;
+                        transition-delay: .9s ease;
+
+                        height: 3rem;
+                        width: 3rem;
+                        filter: invert(100%);
+                        opacity: 0;
+                    }
                 }
             }
         }

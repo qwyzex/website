@@ -23,27 +23,32 @@ const Header = () => {
                 <ul className="nav-list">
                     <li className="nav-items">
                         <Link to="/" className="essentials home">
-                            HOME
+                            <object data="/images/svg/home.svg" type="image/svg+xml"></object>
+                            <p>HOME</p>
                         </Link>
                     </li>
                     <li className="nav-items">
                         <Link to="/posts" className="essentials posts">
-                            POSTS
+                            <object data="/images/svg/newspaper.svg" type="image/svg+xml"></object>
+                            <p>POSTS</p>
                         </Link>
                     </li>
                     <li className="nav-items">
                         <Link to="/gallery" className="essentials gallery">
-                            GALLERY
+                            <object data="/images/svg/bank.svg" type="image/svg+xml"></object>
+                            <p>GALLERY</p>
                         </Link>
                     </li>
                     <li className="nav-items">
                         <Link to="/profile" className="essentials profile">
-                            PROFILE
+                            <object data="/images/svg/user.svg" type="image/svg+xml"></object>
+                            <p>PROFILE</p>
                         </Link>
                     </li>
                     <li className="nav-items">
                         <Link to="/contact" className="essentials contact">
-                            CONTACT
+                            <object data="/images/svg/email.svg" type="image/svg+xml"></object>
+                            <p>CONTACT</p>
                         </Link>
                     </li>
                     <AdminHeaderLink />
