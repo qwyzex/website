@@ -4,7 +4,7 @@ export interface ColorTextProps {
 	bold?: boolean;
 }
 
-const ColorText = (props: ColorTextProps, {children}: any) => {
+const ColorText = (props: ColorTextProps) => {
 	return (
 		<span
 			style={{
@@ -25,7 +25,7 @@ const ColorText = (props: ColorTextProps, {children}: any) => {
 				fontWeight: props.bold ? 'bold' : 'normal',
 			}}
 		>
-			{children}
+			{props.children}
 		</span>
 	);
 };
