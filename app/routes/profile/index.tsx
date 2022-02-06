@@ -3,6 +3,7 @@ import moreOthersStyle from "~/styles/css/components/MoreOthers.css";
 import profileStyle from "~/styles/css/profile/profile.css";
 
 import { MetaFunction, LinksFunction } from "remix";
+import ColorText from "~/components/ColorText";
 
 export let links: LinksFunction = () => {
     return [
@@ -41,7 +42,6 @@ const Profile = () => {
                         { name: "about", url: "about" },
                         { name: "skills", url: "skills" },
                         { name: "education", url: "education" },
-                        { name: "actual stuff", url: "stuff" },
                     ]}
                 />
             </div>
@@ -53,11 +53,11 @@ const Texts = () => {
     return (
         <>
             <p>
-                My name is <x-acc>Ihsan Fashbir Danurrahardjo</x-acc>, my mate usually
-                call me Ihsan. I am a web-developer from <x-acc>Indonesia</x-acc>.
+                My name is <ColorText ex='accent' bold>Ihsan Fashbir Danurrahardjo</ColorText>, my mate usually
+                call me Ihsan. I am a web-developer from <ColorText ex='accent' bold>Indonesia</ColorText>.
             </p>
             <p>
-                I love <x-acc>Math</x-acc>, Video Games, Design, Writing, Drawing
+                I love <ColorText ex='accent' bold>Math</ColorText>, Video Games, Design, Writing, Drawing
                 (sketch), Video Editing, Movie and Music. I'm born at Metro, Lampung, on
                 September 1st 2007. My hobbies and things that I love is frequently
                 changes. Ranging from Art, Sports, Entertainment to Programming.
