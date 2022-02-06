@@ -114,32 +114,10 @@
   align-items: center;
 }
 #header .navigation .nav-list .nav-items a {
-  text-decoration: none;
-  transition: 0.3s ease;
-  position: relative;
   letter-spacing: 2px;
   color: white;
   font-weight: 600;
   position: relative;
-}
-#header .navigation .nav-list .nav-items a::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  height: 2px;
-  width: 0;
-  background-color: currentColor;
-  color: var(--accent);
-  transition: 0.3s ease;
-}
-#header .navigation .nav-list .nav-items a:hover {
-  opacity: 0.8;
-}
-#header .navigation .nav-list .nav-items a:hover::before {
-  width: 100%;
-}
-#header .navigation .nav-list .nav-items a:active {
-  color: var(--accent) !important;
 }
 #header .navigation .nav-list .nav-items a:hover object {
   opacity: 0.4;

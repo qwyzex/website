@@ -74,7 +74,7 @@ a.essentials::before {
   position: absolute;
   top: 100%;
   width: 0;
-  height: 5px;
+  height: 0.25rem;
   background-color: currentColor;
   color: var(--accent);
   transition: 0.3s ease;
