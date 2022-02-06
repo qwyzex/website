@@ -11,7 +11,8 @@ export let loader = () => {
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '~/firebase';
-import ColorText from "~/components/ColorText";
+import ColorText from '~/components/ColorText';
+import { useState } from 'react';
 
 const Admin = () => {
 	const [user] = useAuthState(auth);
@@ -41,19 +42,7 @@ const Admin = () => {
 
 const AccountPanel = () => {
 	const [user] = useAuthState(auth);
-
-	function showUID() {
-		let wrap = document.querySelector('#uid-wrapper');
-
-		// @ts-ignore
-		if (wrap.value === '****************************') {
-			// @ts-ignore
-			wrap.value = user.uid;
-		} else {
-			// @ts-ignore
-			wrap.value = '****************************';
-		}
-	}
+	const [uidValue, setUidValue] = useState(false);
 
 	const SignInButton = () => {
 		function signInWithGoogle() {
@@ -113,15 +102,15 @@ const AccountPanel = () => {
 					<div className='user-info'>
 						<div className='username'>
 							<label>LOGGED IN AS</label>{' '}
-							<p>
-								<ColorText ex='accent'>{user.displayName}</ColorText >
-							</p>
+							<ColorText bold ex='accent'>
+								{user!.displayName}
+							</ColorText>
 						</div>
 						<div className='email'>
 							<label>EMAIL</label>
-							<p>
-								<ColorText ex='accent'>{user.email}</ColorText >
-							</p>
+							<ColorText bold ex='accent'>
+								{user.email}
+							</ColorText>
 						</div>
 						<div className='uid-container'>
 							<div className='uid-wrapper'>
@@ -129,10 +118,16 @@ const AccountPanel = () => {
 								<input
 									readOnly
 									id='uid-wrapper'
-									defaultValue='****************************'
+									value={
+										uidValue
+											? user!.uid
+											: '****************************'
+									}
 								/>
 							</div>
-							<button onClick={showUID}>SHOW UID</button>
+							<button onClick={() => setUidValue(!uidValue)}>
+								SHOW UID
+							</button>
 						</div>
 					</div>
 				</section>
@@ -199,20 +194,18 @@ const AdminPanel = ({ children }: any) => {
 	);
 };
 
-export function AdminHeaderLink() {
+export function AdminHeaderLink({ children }: any) {
 	const [user] = useAuthState(auth);
 
-	if (user) {
-		return user.uid === 'h8YwHiCjiTdVOXuaTyYhsImzJf82' ? (
-			<li className='nav-items'>
-				<Link to='/admin' className='essentials admin'>
-					ADMIN
-				</Link>
-			</li>
-		) : null;
-	} else {
-		return null;
-	}
+	return user ? (
+		user!.uid === 'h8YwHiCjiTdVOXuaTyYhsImzJf82' ? (
+			<li className='nav-items'>{children}</li>
+		) : (
+			<></>
+		)
+	) : (
+		<></>
+	);
 }
 
 export const NavigateBackToAdmin = () => {
