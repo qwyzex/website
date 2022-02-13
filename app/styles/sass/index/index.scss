@@ -43,7 +43,12 @@ body {
     // background-size: cover;
     // background-position: center;
 
-    background: linear-gradient(60deg, #251c36, #361a1f);
+    // background: linear-gradient(60deg, #251c36, #361a1f);
+
+    // background-image:#ff999b;background-image: radial-gradient(at 3% 95%, hsla(29,76%,79%,1) 0, transparent 51%), radial-gradient(at 11% 26%, hsla(249,82%,71%,1) 0, transparent 57%), radial-gradient(at 76% 88%, hsla(330,67%,63%,1) 0, transparent 51%), radial-gradient(at 98% 68%, hsla(165,68%,67%,1) 0, transparent 53%), radial-gradient(at 84% 96%, hsla(39,91%,70%,1) 0, transparent 47%)
+
+    background-image:#f099ff;
+    background-image: radial-gradient(at 30% 40%, #e071cf 0, #4b8cb366 55%), radial-gradient(at 36% 80%, #9dbde7 0, #171ab37d 48%), radial-gradient(at 70% 98%, #8e8ae5 0, transparent 55%), radial-gradient(at 97% 81%, #e6ef85 0, transparent 42%), radial-gradient(at 53% 49%, #73b6e2 0, transparent 58%);
 }
 
 @media (max-width: 60rem) {

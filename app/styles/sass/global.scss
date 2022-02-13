@@ -202,6 +202,10 @@ a {
     color: rgb(50%, 50%, 50%) !important;
     font-family: var(--font-mono);
 
+    &.light {
+        color: rgb(80%, 80%, 80%) !important;
+    }
+
     * {
         color: rgb(50%, 50%, 50%) !important;
         font-family: var(--font-mono);

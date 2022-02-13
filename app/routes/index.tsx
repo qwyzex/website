@@ -32,7 +32,9 @@ const Landing = () => {
 		<div className='page landing split'>
 			<div className='message' id='welcome'>
 				<div className='welcome-text'>
-					<p className='cascade absolute random'>{'<Welcome />'}</p>
+					<p className='cascade light absolute random'>
+						{'<Welcome />'}
+					</p>
 					<h1 className=''>
 						My name is, <ColorText ex='accent'>qwyzeX</ColorText>
 					</h1>
@@ -62,7 +64,7 @@ const Landing = () => {
 
 const LandingProjects = () => {
 	const [landingProjectsData, setLandingProjectsData]: any[] = useState(null);
-	
+
 	useEffect(() => {
 		async function fetchProjects() {
 			const res = await fetch('/api/projects');

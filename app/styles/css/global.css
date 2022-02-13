@@ -159,6 +159,9 @@ a[download]::before {
   color: gray !important;
   font-family: var(--font-mono);
 }
+.cascade.light {
+  color: #cccccc !important;
+}
 .cascade * {
   color: gray !important;
   font-family: var(--font-mono);
