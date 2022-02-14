@@ -6,10 +6,6 @@ body {
   background: linear-gradient(var(--color-background-transparent-semi), #00000000);
 }
 
-.nav-items a.gallery::before {
-  width: 100% !important;
-}
-
 .gallery-container {
   padding-bottom: 3rem;
 }

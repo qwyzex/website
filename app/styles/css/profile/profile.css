@@ -2,10 +2,6 @@ body {
   background: linear-gradient(75deg, var(--color-background-medium), #3a188a);
 }
 
-.nav-items a.profile::before {
-  width: 100% !important;
-}
-
 .profile-container {
   position: relative;
   display: flex;

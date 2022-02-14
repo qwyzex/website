@@ -112,12 +112,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #00000000;
+  transition: 0.4s ease;
+}
+#header .navigation .nav-list .nav-items.active a {
+  text-decoration: none;
+}
+#header .navigation .nav-list .nav-items.active a:hover {
+  text-decoration: none;
 }
 #header .navigation .nav-list .nav-items a {
+  padding: 0.6rem 1rem;
   letter-spacing: 2px;
   color: white;
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #00000000;
+  text-decoration-thickness: 3px;
+  transition: 0.3s ease;
   position: relative;
+}
+#header .navigation .nav-list .nav-items a:hover {
+  text-decoration-color: #ffffff;
 }
 #header .navigation .nav-list .nav-items a:hover object {
   opacity: 0.4;

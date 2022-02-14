@@ -19,9 +19,6 @@ body {
     grid-template-columns: 1fr max-content;
   }
 }
-.nav-items a.posts::before {
-  width: 100% !important;
-}
 
 .page > h1 {
   font-size: 3em;

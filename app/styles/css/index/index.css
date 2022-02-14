@@ -2,10 +2,6 @@
   content: "~ $ ";
 }
 
-.nav-items a.home::before {
-  width: 100% !important;
-}
-
 body {
   background: linear-gradient(60deg, #251c36, #361a1f);
 }

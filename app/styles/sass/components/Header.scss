@@ -175,17 +175,33 @@
                 // li
                 list-style: none;
                 @include flex-row-center();
+                background-color: #00000000;
+                transition: .4s ease;
 
+                &.active {
+                    a {
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+                
                 a {
-                    // @include anchor();
-
+                    padding: .6rem 1rem;
+                    
                     letter-spacing: 2px;
                     color: white;
                     font-weight: 600;
 
+                    text-decoration: underline;
+                    text-decoration-color: #00000000;
+                    text-decoration-thickness: 3px;
+                    transition: .3s ease;
                     position: relative;
 
                     &:hover {
+                        text-decoration-color: #ffffff;
                         object {
                             opacity: .4;
                         }

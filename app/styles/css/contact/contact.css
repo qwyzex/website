@@ -6,10 +6,6 @@ body {
   background: linear-gradient(var(--color-background-medium-transparent-bold), #00000000);
 }
 
-.nav-items a.contact::before {
-  width: 100% !important;
-}
-
 @media (max-width: 65rem) {
   .contact-container {
     flex-direction: column;
