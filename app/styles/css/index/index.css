@@ -3,7 +3,8 @@
 }
 
 body {
-  background: linear-gradient(60deg, #251c36, #361a1f);
+  background-image: #f099ff;
+  background-image: radial-gradient(at 30% 40%, #e071cf 0, #4b8cb366 55%), radial-gradient(at 36% 80%, #9dbde7 0, #171ab37d 48%), radial-gradient(at 70% 98%, #8e8ae5 0, transparent 55%), radial-gradient(at 97% 81%, #e6ef85 0, transparent 42%), radial-gradient(at 53% 49%, #73b6e2 0, transparent 58%);
 }
 
 @media (max-width: 60rem) {

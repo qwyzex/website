@@ -1,5 +1,6 @@
 body {
-  background: linear-gradient(80deg, var(--color-background-medium), var(--color-background-medium-transparent-bold));
+  background-image: #ff99c3;
+  background-image: radial-gradient(at 10% 21%, #fa6b94 0, #fb808082 53%), radial-gradient(at 13% 68%, #e4d162 0, transparent 49%), radial-gradient(at 5% 95%, #c1f29c 0, transparent 45%), radial-gradient(at 43% 59%, #f38ce7 0, transparent 43%), radial-gradient(at 96% 50%, #ffc2e7 0, transparent 42%);
 }
 
 .main {

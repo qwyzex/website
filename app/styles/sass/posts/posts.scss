@@ -2,11 +2,18 @@ body {
     // background: var(--dim), url("/images/background/abstract-14.jpg");
     // background-size: cover;
 
-    background: linear-gradient(
-        80deg,
-        var(--color-background-medium),
-        var(--color-background-medium-transparent-bold)
-    );
+    // background: linear-gradient(
+    //     80deg,
+    //     var(--color-background-medium),
+    //     var(--color-background-medium-transparent-bold)
+    // );
+
+    // background-image:#ff999e;background-image: radial-gradient(at 83% 25%, hsla(318,95%,61%,1) 0, transparent 45%), radial-gradient(at 62% 83%, hsla(299,83%,78%,1) 0, transparent 46%), radial-gradient(at 64% 57%, hsla(348,73%,79%,1) 0, transparent 50%), radial-gradient(at 6% 72%, hsla(34,84%,77%,1) 0, transparent 53%), radial-gradient(at 10% 23%, hsla(62,88%,73%,1) 0, transparent 41%);
+
+    // background-image:#fc99ff;background-image: radial-gradient(at 65% 68%, hsla(225,65%,60%,1) 0, transparent 40%), radial-gradient(at 96% 14%, hsla(312,61%,60%,1) 0, transparent 48%), radial-gradient(at 30% 80%, hsla(176,60%,77%,1) 0, transparent 40%), radial-gradient(at 43% 50%, hsla(237,91%,70%,1) 0, transparent 57%), radial-gradient(at 55% 30%, hsla(25,95%,77%,1) 0, transparent 50%);
+    
+    background-image:#ff99c3;
+    background-image: radial-gradient(at 10% 21%, #fa6b94 0, #fb808082 53%), radial-gradient(at 13% 68%, #e4d162 0, transparent 49%), radial-gradient(at 5% 95%, #c1f29c 0, transparent 45%), radial-gradient(at 43% 59%, #f38ce7 0, transparent 43%), radial-gradient(at 96% 50%, #ffc2e7 0, transparent 42%)
 }
 
 .main {

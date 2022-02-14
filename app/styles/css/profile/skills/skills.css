@@ -1,5 +1,6 @@
 body {
-  background: var(--dim), url("/images/background/abstract-18.jpg") no-repeat;
+  background-image: #99ffd8;
+  background-image: radial-gradient(at 69% 55%, #37e1d6 0, #10f2d361 59%), radial-gradient(at 71% 11%, #73e8b7 0, transparent 50%), radial-gradient(at 8% 56%, #38d692 0, transparent 40%), radial-gradient(at 100% 97%, #4884e5 0, transparent 55%), radial-gradient(at 30% 33%, #e3ec32 0, transparent 50%);
   background-size: cover;
 }
 
