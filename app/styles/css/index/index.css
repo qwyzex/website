@@ -42,7 +42,7 @@ main .page.landing {
   max-height: 700px;
   height: calc(85vh - 4em);
   position: relative;
-  background: linear-gradient(45deg, var(--color-background-medium-transparent-bold), var(--color-background-transparent-semi));
+  background: linear-gradient(45deg, #202020cc, #00000000);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 15px 30px #00000060, 15px 15px 0 var(--accent);
@@ -84,27 +84,7 @@ main .page #welcome .learn-more-cont {
   align-items: center;
   gap: 1em;
 }
-main .page #welcome .learn-more-cont #learn-more {
-  background-color: #00000000;
-  border: 2px solid var(--accent);
-  border-radius: 6px;
-  padding: 0.6em 1em;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-decoration: none;
-  animation: slide-up-1 5s;
-  transition: 0.2s ease;
-}
-main .page #welcome .learn-more-cont #learn-more:hover {
-  color: white;
-  background-color: var(--accent);
-  border-top: 2px solid #ff668a;
-  border-left: 2px solid #ff668a;
-  border-right: 2px solid #990024;
-  border-bottom: 2px solid #990024;
-}
-main .page #welcome .learn-more-cont #skills {
+main .page #welcome .learn-more-cont #learn-more, main .page #welcome .learn-more-cont #skills {
   position: relative;
   background-color: #00000000;
   color: white;
@@ -116,22 +96,31 @@ main .page #welcome .learn-more-cont #skills {
   animation: slide-up-2 5s;
   transition: 0.3s ease;
 }
-main .page #welcome .learn-more-cont #skills::before {
+main .page #welcome .learn-more-cont #learn-more::before, main .page #welcome .learn-more-cont #skills::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 5%;
-  background-color: yellow;
   transition: 0.3s ease;
   z-index: -1;
 }
-main .page #welcome .learn-more-cont #skills:hover {
+main .page #welcome .learn-more-cont #learn-more:hover, main .page #welcome .learn-more-cont #skills:hover {
   color: black;
+  transform: translateY(-3px);
 }
-main .page #welcome .learn-more-cont #skills:hover::before {
+main .page #welcome .learn-more-cont #learn-more:hover::before, main .page #welcome .learn-more-cont #skills:hover::before {
   height: 100%;
+}
+main .page #welcome .learn-more-cont #learn-more:active, main .page #welcome .learn-more-cont #skills:active {
+  transform: translateY(4px);
+}
+main .page #welcome .learn-more-cont #skills::before {
+  background-color: yellow;
+}
+main .page #welcome .learn-more-cont #learn-more::before {
+  background-color: var(--accent);
 }
 main .page .picture {
   display: flex;
