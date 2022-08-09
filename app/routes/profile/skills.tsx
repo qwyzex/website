@@ -1,5 +1,4 @@
 import skillsStyle from '~/styles/css/profile/skills/skills.css';
-import { skillsQuery } from '~/data/skillsQuery';
 import RouteNav from '../../components/RouteNav';
 import { useEffect, useState } from 'react';
 import LoadingText from '~/components/LoadingText';
@@ -136,10 +135,7 @@ const Skills = () => {
 				<>
 					<article className='summary'>
 						<h1 className='skills-title'>MY SKILLS</h1>
-						<p>
-							Most of my "SKILLS" I put here is in technology or
-							web development category.
-						</p>
+						<p>Technical / Web Development skills</p>
 					</article>
 					<SkillsList />
 					<SkillsToLearn />
