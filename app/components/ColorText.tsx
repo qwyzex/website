@@ -1,10 +1,19 @@
+import { ReactNode } from 'react';
+
 export interface ColorTextProps {
-    children?: any,
-	ex?: 'react' | 'nodejs' | 'remix' | 'babel' | 'javascript' | 'fireship' | 'accent';
+	children?: ReactNode;
+	ex?:
+		| 'react'
+		| 'nodejs'
+		| 'remix'
+		| 'babel'
+		| 'javascript'
+		| 'fireship'
+		| 'accent';
 	bold?: boolean;
 }
 
-const ColorText = (props: ColorTextProps, {children}: any) => {
+const ColorText = (props: ColorTextProps) => {
 	return (
 		<span
 			style={{
@@ -25,7 +34,7 @@ const ColorText = (props: ColorTextProps, {children}: any) => {
 				fontWeight: props.bold ? 'bold' : 'normal',
 			}}
 		>
-			{children}
+			{props.children}
 		</span>
 	);
 };
