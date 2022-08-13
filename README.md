@@ -19,3 +19,7 @@ You can contribute to this site! Spot a typo? Wrong definition etc. ? You can cl
 > "There was so many SASS Styling that this repo is defined as SASS Repository, not Javascript nor Typescript"
 >
 > 2020-3-4
+
+> Update : "Not anymore..."
+>
+> 2022-5-11
