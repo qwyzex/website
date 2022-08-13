@@ -42,7 +42,7 @@ const Profile = () => {
 						{ name: 'about', url: 'about' },
 						{ name: 'skills', url: 'skills' },
 						{ name: 'education', url: 'education' },
-						{ name: 'actual stuff', url: 'stuff' },
+						// { name: 'actual stuff', url: 'stuff' },
 					]}
 				/>
 			</div>
