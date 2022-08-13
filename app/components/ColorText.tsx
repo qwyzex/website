@@ -1,6 +1,15 @@
+import { ReactNode } from 'react';
+
 export interface ColorTextProps {
-    children?: any,
-	ex?: 'react' | 'nodejs' | 'remix' | 'babel' | 'javascript' | 'fireship' | 'accent';
+	children?: ReactNode;
+	ex?:
+		| 'react'
+		| 'nodejs'
+		| 'remix'
+		| 'babel'
+		| 'javascript'
+		| 'fireship'
+		| 'accent';
 	bold?: boolean;
 }
 

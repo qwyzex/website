@@ -36,13 +36,20 @@ const Landing = () => {
 						{'<Welcome />'}
 					</p>
 					<h1 className=''>
-						My name is, <ColorText ex='accent'>qwyzeX</ColorText>
+						<ColorText bold ex='accent'>
+							qwyzeX
+						</ColorText>
 					</h1>
 					<p>
 						I'm a 14y/o Solo Web Developer from{' '}
-						<ColorText ex='accent'>Indonesia</ColorText>. Currently
-						getting into <ColorText ex='accent'>economy</ColorText>,
-						love cat :3
+						<ColorText bold ex='accent'>
+							Indonesia
+						</ColorText>
+						. Currently getting into{' '}
+						<ColorText bold ex='accent'>
+							economy
+						</ColorText>
+						, love cat :3
 					</p>
 				</div>
 				<div className='learn-more-cont'>
